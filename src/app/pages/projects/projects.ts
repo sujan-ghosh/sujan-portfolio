@@ -1,43 +1,61 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
+interface Project {
+  title: string;
+
+  type: string;
+
+  image: string;
+
+  description: string;
+
+  technologies: string[];
+
+  github: string;
+
+  live: string;
+}
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
 export class Projects {
-  projects = [
+  projects: Project[] = [
     {
-      title: 'Employee Management System',
-      image: 'images/project-placeholder.jpg',
+      title: 'WanderLust',
+
+      type: 'Full Stack',
+
+      image: 'images/wanderlust.png',
+
       description:
-        'A full-stack employee management system with authentication, CRUD operations, reporting, and role-based access.',
-      technologies: ['Angular', '.NET Core', 'SQL Server'],
-      github: '#',
-      demo: '#',
+        'A modern travel accommodation platform where users can browse, create, edit and manage listings with authentication, reviews and image uploads.',
+
+      technologies: ['Node.js', 'Express', 'MongoDB', 'Bootstrap', 'JavaScript'],
+
+      github: 'https://github.com/Sujan-web-pro/WanderLust',
+
+      live: 'https://wanderlust-tourism-txw6.onrender.com/listings',
     },
 
     {
-      title: 'Banking Management System',
-      image: 'images/project-placeholder.jpg',
-      description:
-        'Enterprise banking software developed using Angular, .NET Core, REST APIs and SQL Server.',
-      technologies: ['Angular', '.NET Core', 'REST API'],
-      github: '#',
-      demo: '#',
-    },
+      title: 'Weather Widget',
 
-    {
-      title: 'Portfolio Website',
-      image: 'images/project-placeholder.jpg',
+      type: 'Frontend',
+
+      image: 'images/weather-widget.png',
+
       description:
-        'Modern responsive portfolio built with Angular, Bootstrap and Angular Material.',
-      technologies: ['Angular', 'Bootstrap', 'SCSS'],
-      github: '#',
-      demo: '#',
+        'Responsive weather application built with React and Material UI using a live Weather API.',
+
+      technologies: ['React', 'Material UI', 'JavaScript', 'Weather API'],
+
+      github: 'https://github.com/Sujan-web-pro/Weather-Widget',
+
+      live: 'https://weather-widget-17qf.onrender.com',
     },
   ];
 }

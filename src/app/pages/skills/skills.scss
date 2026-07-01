@@ -1,86 +1,115 @@
-.skills-section {
+.skills-section{
 
-    background: #111827;
+    padding:100px 0;
 
-    padding: 100px 0;
+    background:#111827;
 
-    color: white;
+    color:#fff;
 }
 
-.section-heading {
+.section-heading{
 
-    text-align: center;
+    text-align:center;
 
-    margin-bottom: 60px;
+    margin-bottom:60px;
 }
 
-.section-heading h2 {
+.section-heading h2{
 
-    color: #3b82f6;
+    font-size:42px;
 
-    font-size: 42px;
+    font-weight:700;
 
-    font-weight: 700;
+    color:#3b82f6;
+
+    margin-bottom:10px;
 }
 
-.section-heading p {
+.section-heading p{
 
-    color: #94a3b8;
+    color:#94a3b8;
+
+    font-size:18px;
 }
 
-.skill-card {
+.skill-card{
 
-    background: #1e293b;
+    background:#1e293b;
 
-    border-radius: 20px;
+    border:1px solid rgba(255,255,255,.08);
 
-    padding: 35px 20px;
+    border-radius:20px;
 
-    text-align: center;
+    padding:35px 20px;
 
-    transition: .35s;
+    text-align:center;
 
-    height: 100%;
+    transition:.35s;
 
-    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+    height:100%;
 }
 
-.skill-card:hover {
+.skill-card:hover{
 
-    transform: translateY(-10px);
+    transform:translateY(-8px);
 
-    background: #2563eb;
+    border-color:#3b82f6;
+
+    box-shadow:0 20px 40px rgba(59,130,246,.20);
 }
 
-.skill-card i {
+.skill-card i{
 
-    font-size: 55px;
+    font-size:52px;
 
-    margin-bottom: 20px;
+    color:#3b82f6;
 
-    color: #60a5fa;
+    margin-bottom:20px;
+
+    transition:.35s;
 }
 
-.skill-card:hover i {
+.skill-card:hover i{
 
-    color: white;
+    transform:scale(1.15) rotate(5deg);
 }
 
-.skill-card h4 {
+.skill-card h5{
 
-    font-weight: 700;
+    color:#fff;
 
-    margin-bottom: 10px;
+    font-size:18px;
+
+    font-weight:600;
+
+    margin:0;
 }
 
-.skill-card p {
+@media(max-width:768px){
 
-    color: #d1d5db;
+    .skills-section{
 
-    margin: 0;
-}
+        padding:80px 0;
+    }
 
-.skill-card:hover p {
+    .section-heading h2{
 
-    color: white;
+        font-size:34px;
+    }
+
+    .skill-card{
+
+        padding:25px 15px;
+    }
+
+    .skill-card i{
+
+        font-size:42px;
+    }
+
+    .skill-card h5{
+
+        font-size:16px;
+    }
+
 }

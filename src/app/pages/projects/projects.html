@@ -4,49 +4,75 @@
 
         <div class="section-heading">
 
-            <h2>Projects</h2>
+            <h2>Featured Projects</h2>
 
-            <p>Some of my recent work</p>
+            <p>Projects that demonstrate my technical expertise and problem-solving skills.</p>
 
         </div>
 
         <div class="row g-4">
 
-            <div class="col-lg-4 col-md-6" *ngFor="let project of projects">
+            @for(project of projects; track project.title){
+
+            <div class="col-lg-6">
 
                 <div class="project-card">
 
-                    <img [src]="project.image" [alt]="project.title">
+                    <div class="project-image">
+
+                        <img [src]="project.image" [alt]="project.title">
+
+                    </div>
 
                     <div class="project-content">
 
-                        <h4>{{project.title}}</h4>
+                        <div class="project-top">
 
-                        <p>{{project.description}}</p>
+                            <h3>{{project.title}}</h3>
 
-                        <div class="tech-list">
+                            <span class="project-type">
 
-                            <span *ngFor="let tech of project.technologies">
-
-                                {{tech}}
+                                {{project.type}}
 
                             </span>
 
                         </div>
 
-                        <div class="project-buttons">
+                        <p>
 
-                            <a [href]="project.github" target="_blank" class="btn btn-outline-light">
+                            {{project.description}}
 
-                                <i class="fab fa-github"></i>
+                        </p>
 
-                                GitHub
+                        <div class="tech-stack">
+
+                            @for(skill of project.technologies; track skill){
+
+                            <span>
+
+                                {{skill}}
+
+                            </span>
+
+                            }
+
+                        </div>
+
+                        <div class="project-footer">
+
+                            <a [href]="project.live" target="_blank" class="btn btn-primary">
+
+                                <i class="fas fa-arrow-up-right-from-square me-2"></i>
+
+                                Live Demo
 
                             </a>
 
-                            <a [href]="project.demo" target="_blank" class="btn btn-primary">
+                            <a [href]="project.github" target="_blank" class="btn btn-outline-light">
 
-                                Live Demo
+                                <i class="fab fa-github me-2"></i>
+
+                                Source Code
 
                             </a>
 
@@ -57,6 +83,8 @@
                 </div>
 
             </div>
+
+            }
 
         </div>
 
