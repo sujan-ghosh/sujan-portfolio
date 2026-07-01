@@ -46,7 +46,7 @@ export class Projects {
 
       type: 'Frontend',
 
-      image: 'images/weather-widget.png',
+      image: 'images/weather-widget.avif',
 
       description:
         'Responsive weather application built with React and Material UI using a live Weather API.',
