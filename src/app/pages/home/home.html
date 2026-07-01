@@ -4,6 +4,7 @@
 
         <div class="row align-items-center min-vh-100">
 
+            <!-- Left Side -->
             <div class="col-lg-6">
 
                 <p class="hello">
@@ -14,9 +15,20 @@
                     Sujan Ghosh
                 </h1>
 
-                <h2 class="role">
-                    Full Stack Developer
-                </h2>
+                <div class="role">
+
+                    <ngx-typed-js [strings]="[
+      'Angular Developer',
+      '.NET Core Developer',
+      'Full Stack Developer',
+      'MERN Stack Developer'
+    ]" [typeSpeed]="70" [backSpeed]="40" [loop]="true">
+
+                        <h2 class="typing"></h2>
+
+                    </ngx-typed-js>
+
+                </div>
 
                 <p class="description">
                     Results-oriented Full Stack Developer specializing in Angular and .NET Core.
@@ -26,17 +38,17 @@
 
                 <div class="hero-buttons">
 
-                    <a class="btn btn-primary btn-lg me-3">
+                    <button class="btn btn-primary btn-lg me-3">
                         View Projects
-                    </a>
+                    </button>
 
-                    <a class="btn btn-outline-light btn-lg">
+                    <button class="btn btn-outline-light btn-lg">
                         Download CV
-                    </a>
+                    </button>
 
                 </div>
 
-                <div class="social-icons mt-4">
+                <div class="social-icons">
 
                     <a href="https://github.com/Sujan-web-pro" target="_blank">
                         <i class="fab fa-github"></i>
@@ -50,9 +62,35 @@
 
             </div>
 
-            <div class="col-lg-6 text-center">
+            <!-- Right Side -->
 
-                <img src="images\sujan.jpg" class="profile-image" alt="Sujan Ghosh">
+            <div class="col-lg-6">
+
+                <div class="profile-wrapper">
+
+                    <div class="badge angular">
+                        Angular
+                    </div>
+
+                    <div class="badge dotnet">
+                        .NET Core
+                    </div>
+
+                    <div class="badge sql">
+                        SQL Server
+                    </div>
+
+                    <div class="badge ts">
+                        TypeScript
+                    </div>
+
+                    <div class="image-border">
+
+                        <img src="images/sujan.jpg" alt="Sujan Ghosh" class="profile-image">
+
+                    </div>
+
+                </div>
 
             </div>
 

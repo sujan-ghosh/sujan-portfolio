@@ -1,0 +1,63 @@
+.about-section{
+
+    background:#111827;
+
+    color:white;
+
+    padding:100px 0;
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+}
+
+.section-title h2{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#3b82f6;
+}
+
+.section-title p{
+
+    color:#9ca3af;
+}
+
+.about-image{
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:20px;
+
+    object-fit:cover;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+}
+
+.about-section h3{
+
+    margin-bottom:20px;
+
+    font-weight:700;
+}
+
+.about-section p{
+
+    line-height:1.9;
+
+    color:#d1d5db;
+}
+
+.info-item{
+
+    margin-bottom:18px;
+
+    color:#f8fafc;
+}
