@@ -15,7 +15,24 @@ export class Education {
       branch: 'Computer Science & Engineering',
       institute: 'Sanaka Educational Trust’s Group of Institutions',
       year: '2021 - 2025',
-      cgpa: 'CGPA: 7.84',
+      scoreLabel: 'CGPA',
+      score: '7.84',
+    },
+    {
+      degree: 'Higher Secondary (Class XII)',
+      branch: 'Science',
+      institute: 'Bankura Zilla School',
+      year: '2021',
+      scoreLabel: 'Percentage',
+      score: '90.2%',
+    },
+    {
+      degree: 'Secondary (Class X)',
+      branch: 'General',
+      institute: 'Majdiha Saradamoni Vidyayatan',
+      year: '2019',
+      scoreLabel: 'Percentage',
+      score: '90.85%',
     },
   ];
 }

@@ -1,169 +1,176 @@
-.custom-navbar{
-
-    position: sticky;
-
-    top:0;
-
-    z-index:1000;
-
-    backdrop-filter: blur(18px);
-
-    -webkit-backdrop-filter: blur(18px);
-
-    background:rgba(15,23,42,.75);
-
-    border-bottom:1px solid rgba(255,255,255,.08);
-
-    transition:.35s ease;
+.custom-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  background: rgba(15, 23, 42, .78);
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, .25);
+  transition: .35s ease;
 }
+.logo-img{
 
-.logo{
+    width:60px;
 
-    width:44px;
+    height:60px;
 
-    height:44px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    border-radius:50%;
-
-    background:linear-gradient(135deg,#3b82f6,#8b5cf6);
-
-    color:#fff;
-
-    font-weight:700;
+    object-fit:contain;
 
     margin-right:12px;
 
     transition:.35s;
 }
 
-.logo:hover{
+.logo-img:hover{
 
-    transform:rotate(12deg) scale(1.08);
+    transform:rotate(-8deg) scale(1.08);
+
+    filter:drop-shadow(0 0 12px rgba(59,130,246,.5));
 }
 
+// .logo {
+//   width: 44px;
+//   height: 44px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   border-radius: 50%;
+//   background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+//   color: #fff;
+//   font-weight: 700;
+//   margin-right: 12px;
+//   transition: .35s;
+// }
+
+// .logo:hover {
+//   transform: rotate(12deg) scale(1.08);
+// }
+
+// .navbar-brand {
+//   display: flex;
+//   align-items: center;
+//   text-decoration: none;
+// }
 .navbar-brand{
 
     display:flex;
 
     align-items:center;
 
+    gap:12px;
+
     text-decoration:none;
 }
-
+// .brand-name {
+//   color: white;
+//   font-size: 22px;
+//   font-weight: 700;
+// }
 .brand-name{
 
-    color:white;
-
-    font-size:22px;
+    font-size:24px;
 
     font-weight:700;
-}
-
-.nav-item{
-
-    margin-left:8px;
-}
-
-.nav-link{
-
-    position:relative;
-
-    color:#d1d5db;
-
-    font-weight:500;
-
-    padding:8px 14px !important;
-
-    transition:.3s;
-}
-
-.nav-link::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:50%;
-
-    bottom:2px;
-
-    width:0;
-
-    height:2px;
-
-    background:#3b82f6;
-
-    transition:.35s;
-
-    transform:translateX(-50%);
-}
-
-.nav-link:hover{
-
-    color:#ffffff;
-}
-
-.nav-link:hover::after{
-
-    width:70%;
-}
-
-.active{
-
-    color:#60a5fa !important;
-}
-
-.active::after{
-
-    width:70%;
-}
-
-.navbar-toggler{
-
-    border:none;
-
-    box-shadow:none !important;
-}
-
-.navbar-toggler i{
 
     color:white;
 
-    font-size:24px;
+    letter-spacing:.5px;
+}
+.nav-item {
+  margin-left: 8px;
 }
 
-.navbar-collapse{
-
-    transition:.3s;
+.nav-link {
+  position: relative;
+  color: #d1d5db;
+  font-weight: 500;
+  padding: 8px 14px !important;
+  transition: .3s;
 }
 
-@media(max-width:991px){
-
-.navbar-collapse{
-
-    margin-top:15px;
-
-    padding:15px;
-
-    border-radius:15px;
-
-    background:#111827;
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
+  background: #3b82f6;
+  transition: .35s;
+  transform: translateX(-50%);
 }
 
-.nav-item{
-
-    margin:10px 0;
+.nav-link:hover {
+  color: #ffffff;
 }
 
-.nav-link{
-
-    margin-left:0;
+.nav-link:hover::after {
+  width: 70%;
 }
 
+.active {
+  color: #60a5fa !important;
+}
+
+.active::after {
+  width: 70%;
+}
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 16px;
+  padding: 9px 20px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.nav-cta:hover {
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(59, 130, 246, .35);
+}
+
+.navbar-toggler {
+  border: none;
+  box-shadow: none !important;
+}
+
+.navbar-toggler i {
+  color: white;
+  font-size: 24px;
+}
+
+.navbar-collapse {
+  transition: .3s;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 15px;
+    background: #111827;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .nav-link {
+    margin-left: 0;
+  }
+
+  .nav-cta {
+    margin: 14px 0 0;
+    justify-content: center;
+    width: 100%;
+  }
 }

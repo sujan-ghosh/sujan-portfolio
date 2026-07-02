@@ -1,57 +1,36 @@
 <section class="education-section">
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
 
     <div class="container">
-
         <div class="section-heading">
-
+            <span class="section-eyebrow">My Academic Journey</span>
             <h2>Education</h2>
-
-            <p>Academic Background</p>
-
         </div>
 
-        <div class="row justify-content-center">
-
-            <div class="col-lg-8">
-
-                <div class="education-card" *ngFor="let item of education">
-
-                    <div class="year">
-
-                        {{item.year}}
-
-                    </div>
-
-                    <h3>
-
-                        {{item.degree}}
-
-                    </h3>
-
-                    <h5>
-
-                        {{item.branch}}
-
-                    </h5>
-
-                    <p>
-
-                        {{item.institute}}
-
-                    </p>
-
-                    <span class="cgpa">
-
-                        {{item.cgpa}}
-
-                    </span>
-
+        <div class="timeline">
+            <div class="education-card" *ngFor="let item of education; let i = index" [class.right]="i % 2 !== 0">
+                <div class="timeline-node">
+                    <i class="fas fa-graduation-cap"></i>
                 </div>
 
+                <div class="education-content">
+                    <span class="year">{{ item.year }}</span>
+
+                    <h3>{{ item.degree }}</h3>
+                    <h5>{{ item.branch }}</h5>
+
+                    <p class="college">
+                        <i class="fas fa-university"></i>
+                        {{ item.institute }}
+                    </p>
+
+                    <div class="score">
+                        <i class="fas fa-award"></i>
+                        <span>{{ item.scoreLabel }}: {{ item.score }}</span>
+                    </div>
+                </div>
             </div>
-
         </div>
-
     </div>
-
 </section>

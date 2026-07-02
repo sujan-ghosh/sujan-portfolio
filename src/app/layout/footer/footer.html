@@ -1,55 +1,59 @@
-<footer class="footer">
+<footer class="footer" id="site-footer">
+    <div class="footer-glow"></div>
 
     <div class="container">
+        <div class="row gy-4">
 
-        <div class="row align-items-center">
-
-            <div class="col-lg-6 text-center text-lg-start">
-
-                <h4>Sujan Ghosh</h4>
-
-                <p>
-                    Full Stack Developer | Angular | .NET Core
+            <div class="col-lg-4">
+                <a routerLink="/" class="footer-brand">
+                    <span class="logo">SG</span>
+                    <span>Sujan Ghosh</span>
+                </a>
+                <p class="tagline">
+                    Full Stack Developer crafting secure, scalable and modern web applications with Angular and .NET
+                    Core.
                 </p>
-
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-4 col-6">
+                <h6 class="footer-heading">Quick Links</h6>
+                <ul class="footer-links-list">
+                    <li><a routerLink="/about">About</a></li>
+                    <li><a routerLink="/experience">Experience</a></li>
+                    <li><a routerLink="/skills">Skills</a></li>
+                    <li><a routerLink="/projects">Projects</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-6">
+                <h6 class="footer-heading">Get in Touch</h6>
+                <ul class="footer-links-list">
+                    <li><i class="fas fa-envelope"></i> sujanghosh8001@gmail.com</li>
+                    <li><i class="fas fa-location-dot"></i> Kolkata, West Bengal</li>
+                </ul>
 
                 <div class="footer-links">
-
                     <a href="https://github.com/Sujan-web-pro" target="_blank">
-
                         <i class="fab fa-github"></i>
-
                     </a>
-
                     <a href="https://linkedin.com/in/sujan-ghosh" target="_blank">
-
                         <i class="fab fa-linkedin"></i>
-
                     </a>
-
                     <a href="mailto:sujanghosh8001@gmail.com">
-
                         <i class="fas fa-envelope"></i>
-
                     </a>
-
                 </div>
-
             </div>
 
         </div>
 
         <hr>
 
-        <div class="copyright">
-
-            © 2026 Sujan Ghosh. All Rights Reserved.
-
+        <div class="footer-bottom">
+            <span class="copyright">© {{ currentYear }} Sujan Ghosh. All Rights Reserved.</span>
+            <button class="back-to-top" (click)="scrollToTop()" aria-label="Back to top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
         </div>
-
     </div>
-
 </footer>

@@ -1,89 +1,55 @@
 <section class="projects-section">
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
 
     <div class="container">
 
         <div class="section-heading">
-
             <h2>Featured Projects</h2>
-
             <p>Projects that demonstrate my technical expertise and problem-solving skills.</p>
-
         </div>
 
         <div class="row g-4">
 
-            @for(project of projects; track project.title){
-
+            @for(project of projects; track project.title; let i = $index){
             <div class="col-lg-6">
-
                 <div class="project-card">
 
                     <div class="project-image">
-
-                        <img [src]="project.image" [alt]="project.title">
-
+                        <span class="project-index">{{ (i + 1) < 10 ? '0' + (i + 1) : (i + 1) }}</span>
+                                <img [src]="project.image" [alt]="project.title">
                     </div>
 
                     <div class="project-content">
 
                         <div class="project-top">
-
                             <h3>{{project.title}}</h3>
-
-                            <span class="project-type">
-
-                                {{project.type}}
-
-                            </span>
-
+                            <span class="project-type">{{project.type}}</span>
                         </div>
 
-                        <p>
-
-                            {{project.description}}
-
-                        </p>
+                        <p>{{project.description}}</p>
 
                         <div class="tech-stack">
-
                             @for(skill of project.technologies; track skill){
-
-                            <span>
-
-                                {{skill}}
-
-                            </span>
-
+                            <span>{{skill}}</span>
                             }
-
                         </div>
 
                         <div class="project-footer">
-
                             <a [href]="project.live" target="_blank" class="btn btn-primary">
-
                                 <i class="fas fa-arrow-up-right-from-square me-2"></i>
-
                                 Live Demo
-
                             </a>
-
                             <a [href]="project.github" target="_blank" class="btn btn-outline-light">
-
                                 <i class="fab fa-github me-2"></i>
-
                                 Source Code
-
                             </a>
-
                         </div>
 
                     </div>
 
                 </div>
-
             </div>
-
             }
 
         </div>
